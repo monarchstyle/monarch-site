@@ -1,12 +1,12 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #0f172a;
-  color: white;
+  background: #020617;
+  color: #ffffff;
 }
 
 nav {
-  background: #111827;
+  background: #000000;
   padding: 15px;
 }
 
@@ -20,15 +20,19 @@ nav ul {
 }
 
 nav a {
-  color: #22c55e;
+  color: #f97316;
   text-decoration: none;
   font-weight: bold;
+}
+
+nav a:hover {
+  color: #facc15;
 }
 
 .hero {
   text-align: center;
   padding: 80px 20px;
-  background: linear-gradient(to right, #22c55e, #06b6d4);
+  background: linear-gradient(to right, #f97316, #facc15);
   color: black;
 }
 
@@ -37,8 +41,13 @@ section {
   text-align: center;
 }
 
+h1, h2 {
+  color: #f97316;
+}
+
 footer {
   text-align: center;
   padding: 20px;
-  background: #020617;
+  background: black;
+  color: #aaa;
 }
