@@ -5,74 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monarch Styling Foundation</title>
     <style>
-        /* This section handles the colors and "look" */
-        body { margin: 0; font-family: 'Arial', sans-serif; background-color: #FFF9E7; color: #333; }
-        
-        /* The Navigation Bar (The clicks you wanted) */
+        /* THE COLOR PALETTE (From your Canva design) */
+        :root {
+            --monarch-orange: #FF4500; /* Bold orange from your image */
+            --bg-cream: #FFF9E7;      /* The soft background color */
+            --text-dark: #2c3e50;
+        }
+
+        body { margin: 0; font-family: 'Arial Black', sans-serif; background-color: var(--bg-cream); color: var(--text-dark); line-height: 1.4; }
+
+        /* NAVIGATION BAR - All your requested links */
         nav { 
-            background-color: #FF4500; 
+            background: white; 
             padding: 15px; 
-            text-align: center; 
-            position: sticky; 
-            top: 0; 
+            display: flex; 
+            justify-content: center; 
+            flex-wrap: wrap; 
+            gap: 15px; 
+            border-bottom: 5px solid var(--monarch-orange);
+            position: sticky;
+            top: 0;
             z-index: 1000;
         }
-        nav a { 
-            color: white; 
-            text-decoration: none; 
-            margin: 0 10px; 
-            font-weight: bold; 
-            text-transform: uppercase;
-            font-size: 0.9rem;
-        }
+        nav a { color: var(--monarch-orange); text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; }
         nav a:hover { text-decoration: underline; }
 
-        /* Hero Section */
-        .hero { 
-            background-color: #FF4500; 
-            color: white; 
-            padding: 80px 20px; 
-            text-align: center; 
-        }
-        h1 { font-size: 4rem; margin: 0; text-transform: uppercase; }
+        header { background-color: var(--monarch-orange); color: white; padding: 60px 20px; text-align: center; }
+        h1 { font-size: 4rem; text-transform: uppercase; margin: 0; }
         
-        .container { max-width: 1000px; margin: auto; padding: 40px 20px; text-align: center; }
+        .section { padding: 40px 20px; max-width: 1000px; margin: auto; text-align: center; }
         .btn { 
-            background-color: #FF4500; 
+            background: var(--monarch-orange); 
             color: white; 
             padding: 15px 30px; 
             text-decoration: none; 
-            border-radius: 5px; 
-            display: inline-block;
-            margin-top: 20px;
-            font-weight: bold;
+            display: inline-block; 
+            border-radius: 50px; 
+            font-weight: bold; 
+            margin: 10px;
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="sponsors.html">Sponsors</a>
-        <a href="workshops.html">Workshops</a>
-        <a href="registration.html">Registration</a>
-        <a href="financial.html">Financial</a>
-        <a href="medical.html">Medical</a>
-        <a href="lgbt.html">LGBT</a>
-        <a href="events.html">Events</a>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#sponsors">Sponsors</a>
+        <a href="#workshops">Workshops</a>
+        <a href="#registration">Registration</a>
+        <a href="#financial">Financial</a>
+        <a href="#medical">Medical</a>
+        <a href="#lgbt">LGBT</a>
+        <a href="#events">Events</a>
     </nav>
 
-    <div class="hero">
-        <h1>Monarch Styling Foundation</h1>
-        <p>Providing workshops and resources for trade professionals.</p>
+    <header id="home">
+        <h1>SEE YOU THERE!</h1>
+        <p>MONARCH STYLING FOUNDATION</p>
+    </header>
+
+    <div class="section" id="about">
+        <h2 style="color: var(--monarch-orange); font-size: 3rem;">IT'S ALL ABOUT YOU.</h2>
+        <p>Empowering trade professionals through vocational excellence.</p>
     </div>
 
-    <div class="container">
-        <h2>Welcome</h2>
-        <p>Select a section from the menu above to get started.</p>
-        
-        <a href="sponsors.html" class="btn">Become a Sponsor</a>
+    <div class="section" id="sponsors" style="background: white; border-radius: 20px;">
+        <h2>Sponsors</h2>
+        <p>Partner with us to make a difference.</p>
+        <a href="#" class="btn">Sponsor Registration Form</a>
+    </div>
+
+    <div class="section" id="workshops">
+        <h2>Workshops & Programs</h2>
+        <p>Select your program below to begin your journey.</p>
+        <a href="#" class="btn">Register for Workshops</a>
+    </div>
+
+    <div class="section" style="background: var(--monarch-orange); color: white;">
+        <h2>COMMUNITY RESOURCES</h2>
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+            <a href="#financial" style="color: white;">Financial Help</a>
+            <a href="#medical" style="color: white;">Medical Support</a>
+            <a href="#lgbt" style="color: white;">LGBT Resources</a>
+        </div>
     </div>
 
 </body>
