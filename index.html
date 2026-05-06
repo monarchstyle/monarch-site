@@ -3,93 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monarch Styling Foundation</title>
+    <title>About Us | Monarch Styling Foundation</title>
     <style>
-        /* THE COLOR PALETTE (From your Canva design) */
         :root {
-            --monarch-orange: #FF4500; /* Bold orange from your image */
-            --bg-cream: #FFF9E7;      /* The soft background color */
-            --text-dark: #2c3e50;
+            --accent-gold: #c5a059; /* A professional metallic tone */
+            --dark-charcoal: #2d2d2d;
+            --soft-white: #fdfdfd;
+            --text-gray: #4a4a4a;
         }
 
-        body { margin: 0; font-family: 'Arial Black', sans-serif; background-color: var(--bg-cream); color: var(--text-dark); line-height: 1.4; }
-
-        /* NAVIGATION BAR - All your requested links */
-        nav { 
-            background: white; 
-            padding: 15px; 
-            display: flex; 
-            justify-content: center; 
-            flex-wrap: wrap; 
-            gap: 15px; 
-            border-bottom: 5px solid var(--monarch-orange);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            color: var(--text-gray);
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
         }
-        nav a { color: var(--monarch-orange); text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; }
-        nav a:hover { text-decoration: underline; }
 
-        header { background-color: var(--monarch-orange); color: white; padding: 60px 20px; text-align: center; }
-        h1 { font-size: 4rem; text-transform: uppercase; margin: 0; }
-        
-        .section { padding: 40px 20px; max-width: 1000px; margin: auto; text-align: center; }
-        .btn { 
-            background: var(--monarch-orange); 
-            color: white; 
-            padding: 15px 30px; 
-            text-decoration: none; 
-            display: inline-block; 
-            border-radius: 50px; 
-            font-weight: bold; 
-            margin: 10px;
+        .about-card {
+            max-width: 900px;
+            margin: 40px auto;
+            background: var(--soft-white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .header-banner {
+            background-color: var(--dark-charcoal);
+            color: var(--soft-white);
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header-banner h1 {
+            margin: 0;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 1.8rem;
+        }
+
+        .content-padding {
+            padding: 40px;
+        }
+
+        h2 {
+            color: var(--dark-charcoal);
+            font-size: 1.5rem;
+            border-bottom: 2px solid var(--accent-gold);
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .mission-statement {
+            font-size: 1.25rem;
+            color: var(--dark-charcoal);
+            font-style: italic;
+            border-left: 4px solid var(--accent-gold);
+            padding-left: 20px;
+            margin: 20px 0;
+        }
+
+        p {
+            margin-bottom: 25px;
+        }
+
+        @media (max-width: 600px) {
+            .content-padding { padding: 25px; }
+            .header-banner h1 { font-size: 1.4rem; }
         }
     </style>
 </head>
 <body>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#sponsors">Sponsors</a>
-        <a href="#workshops">Workshops</a>
-        <a href="#registration">Registration</a>
-        <a href="#financial">Financial</a>
-        <a href="#medical">Medical</a>
-        <a href="#lgbt">LGBT</a>
-        <a href="#events">Events</a>
-    </nav>
-
-    <header id="home">
-        <h1>SEE YOU THERE!</h1>
-        <p>MONARCH STYLING FOUNDATION</p>
-    </header>
-
-    <div class="section" id="about">
-        <h2 style="color: var(--monarch-orange); font-size: 3rem;">IT'S ALL ABOUT YOU.</h2>
-        <p>Empowering trade professionals through vocational excellence.</p>
+<div class="about-card">
+    <div class="header-banner">
+        <h1>Monarch Styling Foundation</h1>
     </div>
 
-    <div class="section" id="sponsors" style="background: white; border-radius: 20px;">
-        <h2>Sponsors</h2>
-        <p>Partner with us to make a difference.</p>
-        <a href="#" class="btn">Sponsor Registration Form</a>
-    </div>
+    <div class="content-padding">
+        <section>
+            <h2>Who We Are</h2>
+            <p>
+                The <strong>Monarch Styling Foundation</strong> is a collective of professional barbers, 
+                tattoo artists, and beauty stylists dedicated to opening doors within the trade industries. 
+                We recognize that talent is everywhere, but opportunity is often limited by financial barriers. 
+                By leveraging our expertise and industry networks, we act as a bridge for aspiring creators 
+                who are ready to transform their passion into a career.
+            </p>
+        </section>
 
-    <div class="section" id="workshops">
-        <h2>Workshops & Programs</h2>
-        <p>Select your program below to begin your journey.</p>
-        <a href="#" class="btn">Register for Workshops</a>
+        <section>
+            <h2>Our Mission</h2>
+            <div class="mission-statement">
+                "To empower aspiring beauty and body art professionals by providing accessible vocational 
+                education and financial assistance. Through dedicated scholarship programs and community 
+                resources, we strive to eliminate obstacles like high tuition and lack of transportation."
+            </div>
+            <p>
+                We believe everyone should have access to education at a low cost. Our focus is specifically 
+                on supporting those who are not currently financially stable, providing the tools and 
+                training necessary to achieve long-term independence through the styling arts.
+            </p>
+        </section>
     </div>
-
-    <div class="section" style="background: var(--monarch-orange); color: white;">
-        <h2>COMMUNITY RESOURCES</h2>
-        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-            <a href="#financial" style="color: white;">Financial Help</a>
-            <a href="#medical" style="color: white;">Medical Support</a>
-            <a href="#lgbt" style="color: white;">LGBT Resources</a>
-        </div>
-    </div>
+</div>
 
 </body>
 </html>
